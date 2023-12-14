@@ -15,3 +15,15 @@ body {
 .tile {
   @apply flex items-center justify-center w-24 h-24 text-3xl border;
 }
+
+.correct {
+  @apply bg-green-500;
+}
+
+.incorrect {
+  @apply bg-gray-400;
+}
+
+.wrong-place {
+  @apply bg-yellow-400;
+}
