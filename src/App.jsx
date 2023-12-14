@@ -5,7 +5,7 @@ export default function App() {
   const rows = Array.from({ length: 3 });
   const wordLength = 3;
   const maxTry = 3;
-  // const word = "try";
+  const word = "try";
   const [typedWord, setTypedWord] = useState("");
   const [currentTry, setCurrentTry] = useState(0);
   const [wordHistory, setWordHistory] = useState([]);
@@ -45,12 +45,13 @@ export default function App() {
       setWordHistory((prev) => [...prev, typedWord]);
     }
   }, [typedWord]);
-  console.log(currentTry);
+
   return (
     <div>
       {rows.map((_, index) => (
         <Row
           typedWord={currentTry === index ? typedWord : wordHistory[index]}
+          word={word}
           key={index}
           tiles={wordLength}
         />
